@@ -6,31 +6,19 @@ body {
     padding: 0;
 }
 
-/*header {
-    background-color: #ffcc00;
-    padding: 20px;
-    color: white;
-    font-size: 24px;
-}
-
-header img {
-    width: 100px;
-    height:auto
-}
-*/
 
 header {
-    background-color: transparent; /* Entferne das gelbe Banner */
-    background-image: url("https://i.imgur.com/YOUR_SUNFLOWER_IMAGE.jpg"); /* Ersetze mit dem Bildlink */
-    background-size: cover; /* Deckt den ganzen Header ab */
-    background-position: center; /* Zentriert das Bild */
-    height: 200px; /* Höhe des Headers anpassen */
+    background-image: url("https://i.imgur.com/E2Cw7H8.jpeg"); /* Ersetze mit deinem Bildlink */
+    background-size: cover;
+    background-position: center;
+    height: 250px; /* Höhe anpassen */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white; /* Falls du Text über dem Bild haben willst */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional: Schattiert den Text für bessere Lesbarkeit */
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: dunkler Schatten für bessere Lesbarkeit */
 }
+
 
 #searchBar {
     width: 60%;
@@ -79,10 +67,12 @@ footer {
     background-color: #333;
     color: white;
     padding: 10px;
-    margin-top: 20px;
-    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Stellt sicher, dass das Icon rechts steht */
 }
-.footer-img {
-    width: 30px; /* Größe des Icons anpassen */
+
+.footer-image {
+    width: 30px; /* Größe des Icons */
     height: auto;
 }
