@@ -6,7 +6,7 @@ body {
     padding: 0;
 }
 
-header {
+/*header {
     background-color: #ffcc00;
     padding: 20px;
     color: white;
@@ -16,6 +16,20 @@ header {
 header img {
     width: 100px;
     height:auto
+}
+*/
+
+header {
+    background-color: transparent; /* Entferne das gelbe Banner */
+    background-image: url("https://i.imgur.com/YOUR_SUNFLOWER_IMAGE.jpg"); /* Ersetze mit dem Bildlink */
+    background-size: cover; /* Deckt den ganzen Header ab */
+    background-position: center; /* Zentriert das Bild */
+    height: 200px; /* Höhe des Headers anpassen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Falls du Text über dem Bild haben willst */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional: Schattiert den Text für bessere Lesbarkeit */
 }
 
 #searchBar {
