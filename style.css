@@ -66,13 +66,15 @@ main {
 footer {
     background-color: #333;
     color: white;
-    padding: 10px;
+    padding: 15px;
     display: flex;
-    align-items: center;
-    justify-content: space-between; /* Stellt sicher, dass das Icon rechts steht */
+    justify-content: center; /* Footer-Inhalt zentrieren */
+    align-items: center; /* Vertikal ausrichten */
+    gap: 10px; /* Abstand zwischen Text und Bild */
 }
 
 .footer-image {
-    width: 30px; /* Größe des Icons */
+    width: 20px; /* Größe des Icons */
     height: auto;
+    color:red
 }
