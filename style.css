@@ -73,8 +73,8 @@ footer {
     gap: 10px; /* Abstand zwischen Text und Bild */
 }
 
-.footer-image {
-    width: 20px; /* Größe des Icons */
-    height: auto;
-    color:red
+.footer-icon {
+    color: red; /* Falls du es in Rot haben möchtest */
+    font-size: 20px; /* Größe anpassen */
+    margin-left: 5px; /* Kleiner Abstand zwischen Text und Icon */
 }
