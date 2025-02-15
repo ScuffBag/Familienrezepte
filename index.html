@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Familienrezepte</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Familienrezepte Bibliothek</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <header>
-        <h1>Unsere Familienrezepte</h1>
+        <h1>📖 Familienrezepte Bibliothek</h1>
+        <input type="text" id="searchBar" placeholder="🔍 Suche nach Rezepten..." onkeyup="searchRecipes()">
     </header>
 
     <main>
-        <h2>Rezept hinzufügen</h2>
-        <form id="recipeForm">
-            <input type="text" id="title" placeholder="Rezeptname" required>
-            <textarea id="ingredients" placeholder="Zutaten" required></textarea>
-            <textarea id="instructions" placeholder="Zubereitung" required></textarea>
-            <button type="submit">Speichern</button>
-        </form>
-
-        <h2>Gespeicherte Rezepte</h2>
-        <div id="recipeList"></div>
+        <div id="recipeContainer">
+            <!-- Rezepte werden hier eingefügt -->
+        </div>
     </main>
 
+    <footer>
+        <p>© 2025 Familienrezepte - Für die ganze Familie ❤️</p>
+    </footer>
+
     <script src="script.js"></script>
+
 </body>
 </html>

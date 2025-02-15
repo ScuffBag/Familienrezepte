@@ -1,29 +1,80 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Familienrezepte</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Unsere Familienrezepte</h1>
-    </header>
+// Rezept-Datenbank (du kannst hier mehr Rezepte hinzufügen!)
+const recipes = [
+    {
+        name: "Omas Apfelkuchen",
+        category: "Dessert",
+        image: "https://source.unsplash.com/400x300/?apple,pie",
+        description: "Ein klassischer Apfelkuchen nach Omas Rezept.",
+        icon: "fa-apple-alt"
+    },
+    {
+        name: "Spaghetti Bolognese",
+        category: "Hauptgericht",
+        image: "https://source.unsplash.com/400x300/?pasta,bolognese",
+        description: "Hausgemachte Bolognese mit frischen Zutaten.",
+        icon: "fa-utensils"
+    },
+    {
+        name: "Tomatensuppe",
+        category: "Vorspeise",
+        image: "https://source.unsplash.com/400x300/?tomato,soup",
+        description: "Leckere Tomatensuppe mit frischen Kräutern.",
+        icon: "fa-seedling"
+    },
+    {
+        name: "Pfannkuchen",
+        category: "Frühstück",
+        image: "https://source.unsplash.com/400x300/?pancakes",
+        description: "Fluffige Pfannkuchen mit Ahornsirup.",
+        icon: "fa-egg"
+    }
+];
 
-    <main>
-        <h2>Rezept hinzufügen</h2>
-        <form id="recipeForm">
-            <input type="text" id="title" placeholder="Rezeptname" required>
-            <textarea id="ingredients" placeholder="Zutaten" required></textarea>
-            <textarea id="instructions" placeholder="Zubereitung" required></textarea>
-            <button type="submit">Speichern</button>
-        </form>
+// Rezepte auf der Seite anzeigen
+function loadRecipes() {
+    const container = document.getElementById("recipeContainer");
+    container.innerHTML = "";
 
-        <h2>Gespeicherte Rezepte</h2>
-        <div id="recipeList"></div>
-    </main>
+    recipes.forEach(recipe => {
+        const recipeCard = document.createElement("div");
+        recipeCard.classList.add("recipe-card");
 
-    <script src="script.js"></script>
-</body>
-</html>
+        recipeCard.innerHTML = `
+            <i class="fas ${recipe.icon}"></i>
+            <h2>${recipe.name}</h2>
+            <img src="${recipe.image}" alt="${recipe.name}">
+            <p>${recipe.description}</p>
+        `;
+
+        container.appendChild(recipeCard);
+    });
+}
+
+// Suchfunktion für Rezepte
+function searchRecipes() {
+    let input = document.getElementById("searchBar").value.toLowerCase();
+    let filteredRecipes = recipes.filter(recipe => 
+        recipe.name.toLowerCase().includes(input) || 
+        recipe.category.toLowerCase().includes(input)
+    );
+
+    const container = document.getElementById("recipeContainer");
+    container.innerHTML = "";
+
+    filteredRecipes.forEach(recipe => {
+        const recipeCard = document.createElement("div");
+        recipeCard.classList.add("recipe-card");
+
+        recipeCard.innerHTML = `
+            <i class="fas ${recipe.icon}"></i>
+            <h2>${recipe.name}</h2>
+            <img src="${recipe.image}" alt="${recipe.name}">
+            <p>${recipe.description}</p>
+        `;
+
+        container.appendChild(recipeCard);
+    });
+}
+
+// Seite laden
+window.onload = loadRecipes;
