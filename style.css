@@ -78,3 +78,12 @@ footer {
     font-size: 20px; /* Größe anpassen */
     margin-left: 5px; /* Kleiner Abstand zwischen Text und Icon */
 }
+ul, ol {
+    list-style: none; /* Entfernt die Punkte und Zahlen */
+    padding: 0; /* Entfernt den Abstand */
+    margin: 0; /* Entfernt den Außenabstand */
+}
+
+ul li, ol li {
+    margin-bottom: 5px; /* Fügt etwas Abstand zwischen den Punkten hinzu */
+}
